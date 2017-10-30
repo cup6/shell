@@ -58,9 +58,9 @@
 
 如果运行有问题，可以将缓存文件清除：
 
-rm /var/lib/puppet/ssl/\*
+`rm /var/lib/puppet/ssl/*`
 
 之后重启
 
-master restart
+`master restart`
 
