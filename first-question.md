@@ -42,9 +42,9 @@
 
 2、master执行：
 
-puppet cert -l -a
+`puppet cert -l -a`
 
-puppet cert -s -a
+`puppet cert -s -a`
 
 三、脚本编写
 
