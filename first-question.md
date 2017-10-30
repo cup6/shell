@@ -24,11 +24,11 @@
 
 3、增加host
 
-vi /etc/hosts
+`vi /etc/hosts`
 
-ip1     master.test.com
+`ip1     master.test.com`
 
-ip2     client.test.com
+`ip2     client.test.com`
 
 4、重启服务
 
