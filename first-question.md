@@ -16,11 +16,11 @@
 
 2、
 
-vi /etc/resolv.conf
+`vi /etc/resolv.conf`
 
 中增加
 
-search     test.com
+`search     test.com`
 
 3、增加host
 
