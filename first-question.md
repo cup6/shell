@@ -38,7 +38,7 @@
 
 1、client执行：
 
-puppet agent -t --server master.test.com
+`puppet agent -t --server master.test.com`
 
 2、master执行：
 
