@@ -32,7 +32,7 @@
 
 4、重启服务
 
-restart master
+`restart master`
 
 测试过程
 
