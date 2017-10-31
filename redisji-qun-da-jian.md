@@ -6,5 +6,7 @@
 
 `yum install redis`
 
+使用yum安装redis-trib，用来管理集群：
 
+yum install redis-trib
 
