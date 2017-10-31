@@ -24,5 +24,17 @@
 
 `vim redis.conf`
 
+在文件中增加如下配置：
 
+`port 7000`
+
+`cluster-enabled yes`
+
+`cluster-config-file nodes.conf`
+
+`cluster-node-timeout 5000`
+
+`appendonly yes`
+
+`daemonize yes`
 
