@@ -26,15 +26,19 @@
 
 在文件中增加如下配置：
 
-`port 7000`
+`port 7000`
 
-`cluster-enabled yes`
+`cluster-enabled yes`
 
-`cluster-config-file nodes.conf`
+`cluster-config-file nodes.conf`
 
-`cluster-node-timeout 5000`
+`cluster-node-timeout 5000`
 
-`appendonly yes`
+`appendonly yes`
 
 `daemonize yes`
+
+按照上面的方法，分别为7001和7002实例设置配置文件。
+
+
 
