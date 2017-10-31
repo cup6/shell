@@ -10,13 +10,13 @@
 
 `yum install redis-trib`
 
-
-
 ## 2、启动Redis实例
 
 在目录下创建实例目录：
 
-cd /var/lib/redis/
+`cd /var/lib/redis/`
 
-mkdir 
+`mkdir 7000 7001 7002`
+
+
 
