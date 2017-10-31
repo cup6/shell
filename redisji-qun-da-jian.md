@@ -66,7 +66,35 @@
 
 ## 5、测试集群
 
+连接redis集群，测试：
 
+`redis-cli -c -h 172.31.144.105 -p 7000`
+
+`172.31.144.105:7000> set foo bar`
+
+`-> Redirected to slot [12182] located at 172.31.144.105:7001`
+
+`OK`
+
+`172.31.144.105:7001> set hello world`
+
+`-> Redirected to slot [866] located at 172.31.144.105:7000`
+
+`OK`
+
+`172.31.144.105:7000> get foo`
+
+`-> Redirected to slot [12182] located at 172.31.144.105:7001`
+
+`"bar"`
+
+`172.31.144.105:7001> get hello`
+
+`-> Redirected to slot [866] located at 172.31.144.105:7000`
+
+`"world"`
+
+`172.31.144.105:7000> `
 
 
 
