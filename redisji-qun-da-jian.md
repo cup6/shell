@@ -4,5 +4,7 @@
 
 使用yum安装redis：
 
-yum install redis
+`yum install redis`
+
+
 
