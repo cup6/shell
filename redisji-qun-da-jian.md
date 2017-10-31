@@ -38,7 +38,11 @@
 
 `daemonize yes`
 
+拷贝redis运行脚本：
+
+`cp /usr/bin/redis-server ./`
+
+
+
 按照上面的方法，分别为7001和7002实例设置配置文件。
-
-
 
