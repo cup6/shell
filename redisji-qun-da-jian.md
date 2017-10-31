@@ -10,7 +10,7 @@
 
 `yum install redis-trib`
 
-## 2、启动Redis实例
+## 2、配置Redis实例
 
 在目录下创建实例目录：
 
@@ -45,6 +45,8 @@
 `cp /usr/bin/redis-server ./`
 
 `cp /usr/bin/redis-trib ./`
+
+## 3、启动实例
 
 
 
