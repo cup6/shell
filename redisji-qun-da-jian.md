@@ -42,7 +42,7 @@
 
 `cp /usr/bin/redis-server ./`
 
-
+`cp /usr/bin/redis-trib ./`
 
 按照上面的方法，分别为7001和7002实例设置配置文件。
 
