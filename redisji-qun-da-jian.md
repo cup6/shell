@@ -12,3 +12,11 @@
 
 
 
+## 2、启动Redis实例
+
+在目录下创建实例目录：
+
+cd /var/lib/redis/
+
+mkdir 
+
