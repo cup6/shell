@@ -14,7 +14,7 @@
 
 2、Java jdk1.7 zookeeper是用java写的所以他的需要JAVA环境，java是运行在java虚拟机上的
 
-3、Zookeeper的稳定版本Zookeeper 3.4.6版本
+3、Zookeeper的稳定版本Zookeeper 3.4.9版本
 
 **2、配置**
 
