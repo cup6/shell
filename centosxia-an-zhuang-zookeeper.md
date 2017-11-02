@@ -47,27 +47,14 @@ mkdir zkdatalog
 
 下载Zookeeper
 
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
 ```
-#
-下载软件
-
+#下载软件
 cd /opt/zookeeper/
+wget http://mirrors.cnnic.cn/apache/zookeeper/zookeeper-3.4.9/zookeeper-3.4.9.tar.gz
 
-
-wget http:
-//mirrors.cnnic.cn/apache/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6
-.tar.gz
-
-
-#
-解压软件
-
-tar -zxvf zookeeper-3.4.6.tar.gz
+#解压软件
+tar -zxvf zookeeper-3.4.9.tar.gz
 ```
-
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
 
 **3、修改配置文件**
 
