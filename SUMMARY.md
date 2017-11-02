@@ -7,4 +7,5 @@
 * [Redis集群搭建](redisji-qun-da-jian.md)
 * [CentOS下安装zookeeper](centosxia-an-zhuang-zookeeper.md)
 * [CentOS下安装Kafka](centosxia-an-zhuang-kafka.md)
+* [CentOS7下配置代理服务器squid](centos7xia-pei-zhi-dai-li-fu-wu-qi-squid.md)
 
