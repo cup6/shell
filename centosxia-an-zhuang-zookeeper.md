@@ -16,11 +16,7 @@
 
 3、Zookeeper的稳定版本Zookeeper 3.4.9版本
 
-**2、配置**
-
-**&**
-
-**安装Zookeeper**
+**2、配置&安装Zookeeper**
 
 下面的操作是：3台服务器统一操作
 
@@ -29,8 +25,7 @@
 ```
 yum list java*
 
-yum 
--y install java-1.7.0-openjdk*
+yum -y install java-1.8.0-openjdk*
 ```
 
 2、下载Zookeeper
