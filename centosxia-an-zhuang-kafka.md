@@ -176,15 +176,13 @@ cd/opt/kafka/kafka_2.11-0.9.0.1/bin
 /kafka-topics.sh --describe --zookeeper localhost:12181 --topic testtopic
 ```
 
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
 OKkafka集群搭建完毕
 
 5、其他说明标注
 
 5.1、日志说明
 
-默认kafka的日志是保存在/opt/kafka/kafka\_2.10-0.9.0.0/logs目录下的，这里说几个需要注意的日志
+默认kafka的日志是保存在/opt/kafka/kafka\_2.12-0.11.0.1/logs目录下的，这里说几个需要注意的日志
 
 ```
 server.log 
