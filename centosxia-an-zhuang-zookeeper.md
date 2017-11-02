@@ -112,40 +112,15 @@ server.3=172.31.144.106:12888:13888
 创建myid文件：
 
 ```
-#
-server1
+#server1
+echo "1"> /opt/zookeeper/zkdata/myid
 
-echo 
-"
-1
-"
->
- /opt/zookeeper/zkdata/
-myid
+#server2
+echo "2"> /opt/zookeeper/zkdata/myid
 
-#
-server2
-
-echo 
-"
-2
-"
->
- /opt/zookeeper/zkdata/
-myid
-
-#
-server3
-
-echo 
-"
-3
-"
->
- /opt/zookeeper/zkdata/myid
+#server3
+echo "3"> /opt/zookeeper/zkdata/myid
 ```
-
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
 
 ** 4、重要配置说明**
 
@@ -155,157 +130,6 @@ echo
 
 3、log4j.properties文件是zk的日志输出文件 在conf目录里用java写的程序基本上有个共同点日志都用log4j，来进行管理。
 
-![](http://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif)
-
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
-```
-#
- Define some default values that can be overridden by system properties
-
-zookeeper.root.logger=INFO, CONSOLE  
-#
-日志级别
-
-zookeeper.console.threshold=INFO  
-#
-使用下面的console来打印日志
-
-zookeeper.log.dir=.    
-#
-日志打印到那里，是咱们启动zookeeper的目录 （建议设置统一的日志目录路径）
-
-zookeeper.log.file=
-zookeeper.log
-zookeeper.log.threshold
-=
-DEBUG
-zookeeper.tracelog.dir
-=
-.
-zookeeper.tracelog.file
-=
-zookeeper_trace.log
-
-
-#
-#
- ZooKeeper Logging Configuration
-
-#
-
-#
- Format is "
-<
-default threshold
->
- (, 
-<
-appender
->
-)+
-#
- DEFAULT: console appender only
-
-log4j.rootLogger=
-${zookeeper.root.logger}
-
-
-#
- Example with rolling log file
-
-#
-log4j.rootLogger=DEBUG, CONSOLE, ROLLINGFILE
-#
- Example with rolling log file and tracing
-
-#
-log4j.rootLogger=TRACE, CONSOLE, ROLLINGFILE, TRACEFILE
-#
-#
- Log INFO level and above messages to the console
-
-#
-
-log4j.appender.CONSOLE=
-org.apache.log4j.ConsoleAppender
-log4j.appender.CONSOLE.Threshold
-=
-${zookeeper.console.threshold}
-log4j.appender.CONSOLE.layout
-=
-org.apache.log4j.PatternLayout
-log4j.appender.CONSOLE.layout.ConversionPattern
-=%d{ISO8601} [myid:%X{myid}] - %-5p [%t:%C{1}@%L] - %m%
-n
-
-
-
-#
- Add ROLLINGFILE to rootLogger to get log file output
-
-#
-    Log DEBUG level and above messages to a log file
-
-log4j.appender.ROLLINGFILE=
-org.apache.log4j.RollingFileAppender
-log4j.appender.ROLLINGFILE.Threshold
-=
-${zookeeper.log.threshold}
-log4j.appender.ROLLINGFILE.File
-=${zookeeper.log.dir}/
-${zookeeper.log.file}
-
-
-#
- Max log file size of 10MB
-
-log4j.appender.ROLLINGFILE.MaxFileSize=
-10MB
-
-#
- uncomment the next line to limit number of backup files
-
-#
-log4j.appender.ROLLINGFILE.MaxBackupIndex=10
-
-log4j.appender.ROLLINGFILE.layout
-=
-org.apache.log4j.PatternLayout
-log4j.appender.ROLLINGFILE.layout.ConversionPattern
-=%d{ISO8601} [myid:%X{myid}] - %-5p [%t:%C{1}@%L] - %m%
-n
-
-
-
-#
-#
- Add TRACEFILE to rootLogger to get log file output
-
-#
-    Log DEBUG level and above messages to a log file
-
-log4j.appender.TRACEFILE=
-org.apache.log4j.FileAppender
-log4j.appender.TRACEFILE.Threshold
-=
-TRACE
-log4j.appender.TRACEFILE.File
-=${zookeeper.tracelog.dir}/
-${zookeeper.tracelog.file}
-
-log4j.appender.TRACEFILE.layout
-=
-org.apache.log4j.PatternLayout
-
-#
-## Notice we are including log4j's NDC here (%x)
-
-log4j.appender.TRACEFILE.layout.ConversionPattern=%d{ISO8601} [myid:%X{myid}] - %-5p [%t:%C{1}@%L][%x] - %m%n
-```
-
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
 4、zkEnv.sh和zkServer.sh文件
 
 zkServer.sh 主的管理程序文件
@@ -314,57 +138,31 @@ zkEnv.sh 是主要配置，zookeeper集群启动时配置环境变量的文件
 
 5、还有一个需要注意
 
-ZooKeeper server
-
-**will not remove old snapshots and log files**
-
-when using the default configuration \(see autopurge below\), this is the responsibility of the operator
+ZooKeeper server **will not remove old snapshots and log files **when using the default configuration \(see autopurge below\), this is the responsibility of the operator
 
 zookeeper不会主动的清除旧的快照和日志文件，这个是操作者的责任。
 
 但是可以通过命令去定期的清理。
 
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
 ```
-#
-!/bin/bash 
-#
-snapshot file dir 
-
+#!/bin/bash 
+#snapshot file dir 
 dataDir=/opt/zookeeper/zkdata/version-2
 
-#
-tran log dir 
-
+#tran log dir 
 dataLogDir=/opt/zookeeper/zkdatalog/version-2
 
 
-#
-Leave 66 files 
-
+#Leave 66 files 
 count=66
+count=$[$count+1] 
+ls -t $dataLogDir/log.* | tail -n +$count | xargs rm -f 
+ls -t $dataDir/snapshot.* | tail -n +$count | xargs rm -f 
 
-count
-=$[$count+1
-] 
-ls 
--t $dataLogDir/log.* | tail -n +$count | xargs rm -
-f 
-ls 
--t $dataDir/snapshot.* | tail -n +$count | xargs rm -
-f 
+#以上这个脚本定义了删除对应两个目录中的文件，保留最新的66个文件，可以将他写到crontab中，设置为每天凌晨2点执行一次就可以了。
+#zk log dir   del the zookeeper log
 
-
-#
-以上这个脚本定义了删除对应两个目录中的文件，保留最新的66个文件，可以将他写到crontab中，设置为每天凌晨2点执行一次就可以了。
-#
-zk log dir   del the zookeeper log
-
-#
-logDir=
-
-#
+#logDir=
 ls -t $logDir/zookeeper.log.* | tail -n +$count | xargs rm -f
 ```
 
