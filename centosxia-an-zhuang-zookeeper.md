@@ -12,7 +12,7 @@
 
 1、Linux服务器一台、三台、五台、（2\*n+1），Zookeeper集群的工作是超过半数才能对外提供服务，3台中超过两台超过半数，允许1台挂掉 ，是否可以用偶数，其实没必要。如果有四台那么挂掉一台还剩下三台服务器，如果在挂掉一个就不行了，这里记住是超过半数。
 
-2、Java jdk1.7 zookeeper是用java写的所以他的需要JAVA环境，java是运行在java虚拟机上的
+2、Java jdk1.8 zookeeper是用java写的所以他的需要JAVA环境，java是运行在java虚拟机上的
 
 3、Zookeeper的稳定版本Zookeeper 3.4.9版本
 
