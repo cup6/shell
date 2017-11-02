@@ -100,28 +100,16 @@ zookeeper.connect=192.168.7.100:12181,192.168.7.101:12181,192.168.7.107:1218
 
 ```
 #broker.id=0  每台服务器的broker.id都不能相同
-#
-hostname
-
+#hostname
 host.name=192.168.7.100
 
-
-#
-在log.retention.hours=168 下面新增下面三项
-
+#在log.retention.hours=168 下面新增下面三项
 message.max.byte=5242880
+default.replication.factor=2
+replica.fetch.max.bytes=5242880
 
-default.replication.factor
-=2
-
-replica.fetch.max.bytes
-=5242880
-
-
-#
-设置zookeeper的连接端口
-
-zookeeper.connect=192.168.7.100:12181,192.168.7.101:12181,192.168.7.107:12181
+#设置zookeeper的连接端口
+zookeeper.connect=172.31.144.104:2181,172.31.144.105:2181,172.31.144.106:2181
 ```
 
 [![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
