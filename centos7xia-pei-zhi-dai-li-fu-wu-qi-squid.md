@@ -12,7 +12,9 @@ OS：CentOS 7
 
 ## 2、搭建代理服务器
 
+在CentOS 7下使用yum安装squid，如下：
 
+`yum install squid`
 
 
 
