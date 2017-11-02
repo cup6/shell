@@ -27,157 +27,79 @@ wget  http://apache.opencas.org/kafka/0.9.0.1/kafka_2.12-0.11.0.1.tgz
 tar -zxvf kafka_2.12-0.11.0.1.tgz
 ```
 
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
 **3、修改配置文件**
 
 进入到config目录
 
 ```
-cd /opt/kafka/kafka_2.11-0.9.0.1/config/
+cd /opt/kafka/kafka_2.12-0.11.0.1/config/
 ```
 
 主要关注：server.properties 这个文件即可，我们可以发现在目录下：
 
-有很多文件，这里可以发现有Zookeeper文件，我们可以根据Kafka内带的zk集群来启动，但是建议使用独立的zk集群
-
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
-```
--rw-r--r--. 1 root root 5699 Feb 22 09:41 192.168.7.101
--rw-r--r--. 1 root root  906 Feb 12 08:37 connect-console-
-sink.properties
-
--rw-r--r--. 1 root root  909 Feb 12 08:37 connect-console-
-source.properties
-
--rw-r--r--. 1 root root 2110 Feb 12 08:37 connect-
-distributed.properties
-
--rw-r--r--. 1 root root  922 Feb 12 08:38 connect-file-
-sink.properties
-
--rw-r--r--. 1 root root  920 Feb 12 08:38 connect-file-
-source.properties
-
--rw-r--r--. 1 root root 1074 Feb 12 08:37 connect-
-log4j.properties
-
--rw-r--r--. 1 root root 2055 Feb 12 08:37 connect-
-standalone.properties
-
--rw-r--r--. 1 root root 1199 Feb 12 08:37
- consumer.properties
-
--rw-r--r--. 1 root root 4369 Feb 12 08:37
- log4j.properties
-
--rw-r--r--. 1 root root 2228 Feb 12 08:38
- producer.properties
-
--rw-r--r--. 1 root root 5699 Feb 15 18:10
- server.properties
-
--rw-r--r--. 1 root root 3325 Feb 12 08:37 test-
-log4j.properties
-
--rw-r--r--. 1 root root 1032 Feb 12 08:37 tools-
-log4j.properties
-
--rw-r--r--. 1 root root 1023 Feb 12 08:37 zookeeper.properties
-```
-
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
-修改配置文件：
-
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
+有很多文件，这里可以发现有Zookeeper文件，我们可以根据Kafka内带的zk集群来启动，但是建议使用独立的zk集群，修改配置文件：
 
 ```
 broker.id=0  
-#
-当前机器在集群中的唯一标识，和zookeeper的myid性质一样
+#当前机器在集群中的唯一标识，和zookeeper的myid性质一样
 
 port=19092 
-#
-当前kafka对外提供服务的端口默认是9092
+#当前kafka对外提供服务的端口默认是9092
 
 host.name=192.168.7.100 
-#
-这个参数默认是关闭的，在0.8.1有个bug，DNS解析问题，失败率的问题。
+#这个参数默认是关闭的，在0.8.1有个bug，DNS解析问题，失败率的问题。
 
 num.network.threads=3 
-#
-这个是borker进行网络处理的线程数
+#这个是borker进行网络处理的线程数
 
 num.io.threads=8 
-#
-这个是borker进行I/O处理的线程数
+#这个是borker进行I/O处理的线程数
 
 log.dirs=/opt/kafka/kafkalogs/ 
-#
-消息存放的目录，这个目录可以配置为“，”逗号分割的表达式，上面的num.io.threads要大于这个目录的个数
+#消息存放的目录，这个目录可以配置为“，”逗号分割的表达式，上面的num.io.threads要大于这个目录的个数
 这个目录，如果配置多个目录，新创建的topic他把消息持久化的地方是，当前以逗号分割的目录中，那个分区数最少就放那一个
 
-socket.send.buffer.bytes
-=102400 
-#
-发送缓冲区buffer大小，数据不是一下子就发送的，先回存储到缓冲区了到达一定的大小后在发送，能提高性能
+socket.send.buffer.bytes=102400 
+#发送缓冲区buffer大小，数据不是一下子就发送的，先回存储到缓冲区了到达一定的大小后在发送，能提高性能
 
 socket.receive.buffer.bytes=102400 
-#
-kafka接收缓冲区大小，当数据到达一定大小后在序列化到磁盘
+#kafka接收缓冲区大小，当数据到达一定大小后在序列化到磁盘
 
 socket.request.max.bytes=104857600 
-#
-这个参数是向kafka请求消息或者向kafka发送消息的请请求的最大数，这个值不能超过java的堆栈大小
+#这个参数是向kafka请求消息或者向kafka发送消息的请请求的最大数，这个值不能超过java的堆栈大小
 
 num.partitions=1 
-#
-默认的分区数，一个topic默认1个分区数
+#默认的分区数，一个topic默认1个分区数
 
 log.retention.hours=168 
-#
-默认消息的最大持久化时间，168小时，7天
+#默认消息的最大持久化时间，168小时，7天
 
 message.max.byte=5242880  
-#
-消息保存的最大值5M
+#消息保存的最大值5M
 
 default.replication.factor=2  
-#
-kafka保存消息的副本数，如果一个副本失效了，另一个还可以继续提供服务
+#kafka保存消息的副本数，如果一个副本失效了，另一个还可以继续提供服务
 
 replica.fetch.max.bytes=5242880  
-#
-取消息的最大直接数
+#取消息的最大直接数
 
 log.segment.bytes=1073741824 
-#
-这个参数是：因为kafka的消息是以追加的形式落地到文件，当超过这个值的时候，kafka会新起一个文件
+#这个参数是：因为kafka的消息是以追加的形式落地到文件，当超过这个值的时候，kafka会新起一个文件
 
 log.retention.check.interval.ms=300000 
-#
-每隔300000毫秒去检查上面配置的log失效时间（log.retention.hours=168 ），到目录查看是否有过期的消息如果有，删除
+#每隔300000毫秒去检查上面配置的log失效时间（log.retention.hours=168 ），到目录查看是否有过期的消息如果有，删除
 
 log.cleaner.enable=false 
-#
-是否启用log压缩，一般不用启用，启用的话可以提高性能
+#是否启用log压缩，一般不用启用，启用的话可以提高性能
 
 zookeeper.connect=192.168.7.100:12181,192.168.7.101:12181,192.168.7.107:1218 
-#
-设置zookeeper的连接端口
+#设置zookeeper的连接端口
 ```
-
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
 
 上面是参数的解释，实际的修改项为：
 
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
 ```
-#
-broker.id=0  每台服务器的broker.id都不能相同
+#broker.id=0  每台服务器的broker.id都不能相同
 #
 hostname
 
