@@ -126,34 +126,21 @@ cd/opt/kafka/kafka_2.11-0.9.0.1/bin
 2、检查服务是否启动
 
 ```
-#
-执行命令jps
-
+#执行命令jps
 20348
  Jps
-
 4233
  QuorumPeerMain
-
 18991 Kafka
 ```
 
-3、创建Topic来验证是否创建成功
-
-更多请看官方文档：[http://kafka.apache.org/documentation.html](http://kafka.apache.org/documentation.html)
-
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
+3、创建Topic来验证是否创建成功，更多请看官方文档：[http://kafka.apache.org/documentation.html](http://kafka.apache.org/documentation.html)
 
 ```
-#
-创建Topic
+#创建Topic
+./kafka-topics.sh --create --zookeeper 172.31.144.105:12181 --replication-factor 2 --partitions 1 --topic testtopic
 
-./kafka-topics.sh --create --zookeeper 192.168.7.100:12181 --replication-factor 2 --partitions 1 --
-topic shuaige
-
-#
-解释
-
+#解释
 --replication-factor 2   
 #
 复制两份
