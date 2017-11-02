@@ -154,11 +154,7 @@ cd/opt/kafka/kafka_2.11-0.9.0.1/bin
 '''
 在一台服务器上创建一个订阅者
 '''
-./kafka-console-consumer.sh --zookeeper localhost:12181 --topic testtopic
-
---
-from
--beginning
+./kafka-console-consumer.sh --zookeeper localhost:12181 --topic testtopic --from-beginning
 ```
 
 [![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
