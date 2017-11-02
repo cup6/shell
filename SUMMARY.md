@@ -5,4 +5,5 @@
 * [Linux下从VCD中提取内容](second-question.md)
 * [将mongodb数据库导入到hbase中](jiangmongodb-shu-ju-ku-dao-ru-dao-hbase-zhong.md)
 * [Redis集群搭建](redisji-qun-da-jian.md)
+* [CentOS下安装zookeeper](centosxia-an-zhuang-zookeeper.md)
 
