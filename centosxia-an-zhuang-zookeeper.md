@@ -166,8 +166,6 @@ ls -t $dataDir/snapshot.* | tail -n +$count | xargs rm -f
 ls -t $logDir/zookeeper.log.* | tail -n +$count | xargs rm -f
 ```
 
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
 其他方法：
 
 第二种：使用ZK的工具类PurgeTxnLog，它的实现了一种简单的历史文件清理策略，可以在这里看一下他的使用方法 [http://zookeeper.apache.org/doc/r3.4.6/zookeeperAdmin.html](http://zookeeper.apache.org/doc/r3.4.6/zookeeperAdmin.html)
@@ -176,71 +174,49 @@ ls -t $logDir/zookeeper.log.* | tail -n +$count | xargs rm -f
 
 第四种：从3.4.0开始，zookeeper提供了自动清理snapshot和事务日志的功能，通过配置 autopurge.snapRetainCount 和 autopurge.purgeInterval 这两个参数能够实现定时清理了。这两个参数都是在zoo.cfg中配置的：
 
-**autopurge.purgeInterval**
+**autopurge.purgeInterval：**这个参数指定了清理频率，单位是小时，需要填写一个1或更大的整数，默认是0，表示不开启自己清理功能。
 
-这个参数指定了清理频率，单位是小时，需要填写一个1或更大的整数，默认是0，表示不开启自己清理功能。
+**autopurge.snapRetainCount：**这个参数和上面的参数搭配使用，这个参数指定了需要保留的文件数目。默认是保留3个。
 
-**autopurge.snapRetainCount**
-
-这个参数和上面的参数搭配使用，这个参数指定了需要保留的文件数目。默认是保留3个。
-
-推荐使用第一种方法
-
-，对于运维人员来说，将日志清理工作独立出来，便于统一管理也更可控。毕竟zk自带的一些工具并不怎么给力。
+推荐使用第一种方法，对于运维人员来说，将日志清理工作独立出来，便于统一管理也更可控。毕竟zk自带的一些工具并不怎么给力。
 
 **5、启动服务并查看**
 
 1、启动服务
 
 ```
-#
-进入到Zookeeper的bin目录下
+#进入到Zookeeper的bin目录下
+cd /opt/zookeeper/zookeeper-3.4.6/bin
 
-cd /opt/zookeeper/zookeeper-3.4.6/
-bin
-
-#
-启动服务（3台都需要操作）
-
+#启动服务（3台都需要操作）
 ./zkServer.sh start
 ```
 
 2、检查服务状态
 
 ```
-#
-检查服务器状态
-
+#检查服务器状态
 ./zkServer.sh status
 ```
 
 通过status就能看到状态：
 
 ```
-./
-zkServer.sh status
+./zkServer.sh status
 JMX enabled by default
 Using config: 
 /opt/zookeeper/zookeeper-3.4.6/bin/../conf/zoo.cfg  
-#
-配置文件
-
+#配置文件
 Mode: follower  
-#
-他是否为领导
+#他是否为领导
 ```
 
-zk集群一般只有一个leader，多个follower，主一般是相应客户端的读写请求，而从主同步数据，当主挂掉之后就会从follower里投票选举一个leader出来。
-
-可以用“jps”查看zk的进程，这个是zk的整个工程的main
+zk集群一般只有一个leader，多个follower，主一般是相应客户端的读写请求，而从主同步数据，当主挂掉之后就会从follower里投票选举一个leader出来。可以用“jps”查看zk的进程，这个是zk的整个工程的main
 
 ```
-#
-执行命令jps
-
+#执行命令jps
 20348
  Jps
-
 4233 QuorumPeerMain
 ```
 
