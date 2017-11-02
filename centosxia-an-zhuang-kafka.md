@@ -112,25 +112,14 @@ replica.fetch.max.bytes=5242880
 zookeeper.connect=172.31.144.104:2181,172.31.144.105:2181,172.31.144.106:2181
 ```
 
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
 **4、启动Kafka集群并测试**
 
 1、启动服务
 
 ```
-#
-从后台启动Kafka集群（3台都需要启动）
-
-cd
-```
-
-```
-/opt/kafka/kafka_2.11-0.9.0.1//bin 
-#
-进入到kafka的bin目录
-
-
+#从后台启动Kafka集群（3台都需要启动）
+cd/opt/kafka/kafka_2.11-0.9.0.1/bin 
+#进入到kafka的bin目录
 ./kafka-server-start.sh -daemon ../config/server.properties
 ```
 
