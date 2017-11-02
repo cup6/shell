@@ -157,8 +157,6 @@ cd/opt/kafka/kafka_2.11-0.9.0.1/bin
 ./kafka-console-consumer.sh --zookeeper localhost:12181 --topic testtopic --from-beginning
 ```
 
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
 测试（在发布者那里发布消息看看订阅者那里是否能正常收到~）：
 
 4、其他命令
@@ -169,34 +167,13 @@ cd/opt/kafka/kafka_2.11-0.9.0.1/bin
 
 ```
 ./kafka-topics.sh --list --zookeeper localhost:12181
-
-#
-就会显示我们创建的所有topic
+#就会显示我们创建的所有topic
 ```
 
 4.2、查看topic状态
 
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
 ```
-/kafka-topics.sh --describe --zookeeper localhost:12181 --
-topic shuaige
-
-#
-下面是显示信息
-
-Topic:ssports    PartitionCount:1    ReplicationFactor:2
-    Configs:
-    Topic: shuaige    Partition: 0    Leader: 
-1    Replicas: 0,1    Isr: 1
-
-#
-分区为为1  复制因子为2   他的  shuaige的分区为0 
-
-#
-Replicas: 0,1   复制的为0，1
-
-#
+/kafka-topics.sh --describe --zookeeper localhost:12181 --topic testtopic
 ```
 
 [![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
