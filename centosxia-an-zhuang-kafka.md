@@ -6,39 +6,25 @@
 
 2、已经搭建好的zookeeper集群（172.31.144.104~106）
 
-3、软件版本kafka\_2.12-0.11.0.1.tgz
-
-[  
-](http://apache.opencas.org/kafka/0.9.0.1/kafka_2.11-0.9.0.1.tgz)
+3、软件版本kafka\_2.12-0.11.0.1.tgz[ ](http://apache.opencas.org/kafka/0.9.0.1/kafka_2.11-0.9.0.1.tgz)
 
 **2、创建目录并下载安装软件**
 
-[![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
-
 ```
-#
-创建目录
+#创建目录
 
 cd /opt/
-
 mkdir kafka 
-#
-创建项目目录
+#创建项目目录
 cd kafka
 mkdir kafkalogs 
-#
-创建kafka消息目录，主要存放kafka消息
-#
-下载软件
-
-wget  http://apache.opencas.org/kafka/0.9.0.1/kafka_2.11-0.9.0.1
-.tgz
+#创建kafka消息目录，主要存放kafka消息
+#下载软件
+wget  http://apache.opencas.org/kafka/0.9.0.1/kafka_2.12-0.11.0.1.tgz
 
 
-#
-解压软件
-
-tar -zxvf kafka_2.11-0.9.0.1.tgz
+#解压软件
+tar -zxvf kafka_2.12-0.11.0.1.tgz
 ```
 
 [![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
@@ -255,7 +241,7 @@ cd
 
 3、创建Topic来验证是否创建成功
 
-更多请看官方文档：http://kafka.apache.org/documentation.html
+更多请看官方文档：[http://kafka.apache.org/documentation.html](http://kafka.apache.org/documentation.html)
 
 [![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
 
@@ -344,7 +330,7 @@ Replicas: 0,1   复制的为0，1
 
 [![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
 
- OKkafka集群搭建完毕
+OKkafka集群搭建完毕
 
 5、其他说明标注
 
@@ -511,7 +497,7 @@ numChildren
 = 1
 
 [zk: 
-127.0.0.1:12181(CONNECTED) 8] 
+127.0.0.1:12181(CONNECTED) 8]
 ```
 
 
