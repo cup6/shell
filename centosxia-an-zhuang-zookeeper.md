@@ -33,23 +33,16 @@ yum -y install java-1.8.0-openjdk*
 首先要注意在生产环境中目录结构要定义好，防止在项目过多的时候找不到所需的项目
 
 ```
-#
-我的目录统一放在/opt下面
+#我的目录统一放在/opt下面
 
-#
-首先创建Zookeeper项目目录
+#首先创建Zookeeper项目目录
+mkdir zookeeper
 
-mkdir zookeeper 
-#
-项目目录
+#项目目录
+mkdir zkdata
 
-mkdir zkdata 
-#
-存放快照日志
-
+#存放快照日志
 mkdir zkdatalog
-#
-存放事物日志
 ```
 
 下载Zookeeper
