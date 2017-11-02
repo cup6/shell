@@ -10,17 +10,13 @@
 
 172.31.144.106 server3
 
-1、Linux服务器一台、三台、五台、（
-
-2\*n+1
-
-），Zookeeper集群的工作是超过半数才能对外提供服务，3台中超过两台超过半数，允许1台挂掉 ，是否可以用偶数，其实没必要。
+1、Linux服务器一台、三台、五台、（2\*n+1），Zookeeper集群的工作是超过半数才能对外提供服务，3台中超过两台超过半数，允许1台挂掉 ，是否可以用偶数，其实没必要。
 
 如果有四台那么挂掉一台还剩下三台服务器，如果在挂掉一个就不行了，这里记住是超过半数。
 
 2、Java jdk1.7 zookeeper是用java写的所以他的需要JAVA环境，java是运行在java虚拟机上的
 
-3、Zookeeper的稳定版本Zookeeper 3.4.6版本 
+3、Zookeeper的稳定版本Zookeeper 3.4.6版本
 
 **2、配置**
 
@@ -117,7 +113,7 @@ conf
 
 [![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
 
-\#zoo\_sample.cfg  这个文件是官方给我们的zookeeper的样板文件，给他复制一份命名为zoo.cfg，zoo.cfg是官方指定的文件命名规则。
+\#zoo\_sample.cfg  这个文件是官方给我们的zookeeper的样板文件，给他复制一份命名为zoo.cfg，zoo.cfg是官方指定的文件命名规则。
 
 **3台服务器的配置文件**
 
@@ -228,9 +224,9 @@ echo
 
 [![](http://common.cnblogs.com/images/copycode.gif "复制代码")](javascript:void%280%29;)
 
-** 4、重要配置说明**
+** 4、重要配置说明**
 
-1、myid文件和server.myid  在快照目录下存放的标识本台服务器的文件，他是整个zk集群用来发现彼此的一个重要标识。
+1、myid文件和server.myid  在快照目录下存放的标识本台服务器的文件，他是整个zk集群用来发现彼此的一个重要标识。
 
 2、zoo.cfg 文件是zookeeper配置文件 在conf目录里。
 
@@ -395,11 +391,11 @@ zkEnv.sh 是主要配置，zookeeper集群启动时配置环境变量的文件
 
 5、还有一个需要注意
 
-ZooKeeper server 
+ZooKeeper server
 
 **will not remove old snapshots and log files**
 
- when using the default configuration \(see autopurge below\), this is the responsibility of the operator
+when using the default configuration \(see autopurge below\), this is the responsibility of the operator
 
 zookeeper不会主动的清除旧的快照和日志文件，这个是操作者的责任。
 
@@ -425,7 +421,7 @@ dataLogDir=/opt/zookeeper/zkdatalog/version-2
 Leave 66 files 
 
 count=66
- 
+
 count
 =$[$count+1
 ] 
@@ -453,7 +449,7 @@ ls -t $logDir/zookeeper.log.* | tail -n +$count | xargs rm -f
 
 其他方法：
 
-第二种：使用ZK的工具类PurgeTxnLog，它的实现了一种简单的历史文件清理策略，可以在这里看一下他的使用方法 http://zookeeper.apache.org/doc/r3.4.6/zookeeperAdmin.html 
+第二种：使用ZK的工具类PurgeTxnLog，它的实现了一种简单的历史文件清理策略，可以在这里看一下他的使用方法 [http://zookeeper.apache.org/doc/r3.4.6/zookeeperAdmin.html](http://zookeeper.apache.org/doc/r3.4.6/zookeeperAdmin.html)
 
 第三种：对于上面这个执行，ZK自己已经写好了脚本，在bin/zkCleanup.sh中，所以直接使用这个脚本也是可以执行清理工作的。
 
@@ -461,11 +457,11 @@ ls -t $logDir/zookeeper.log.* | tail -n +$count | xargs rm -f
 
 **autopurge.purgeInterval**
 
-  这个参数指定了清理频率，单位是小时，需要填写一个1或更大的整数，默认是0，表示不开启自己清理功能。
+这个参数指定了清理频率，单位是小时，需要填写一个1或更大的整数，默认是0，表示不开启自己清理功能。
 
 **autopurge.snapRetainCount**
 
- 这个参数和上面的参数搭配使用，这个参数指定了需要保留的文件数目。默认是保留3个。
+这个参数和上面的参数搭配使用，这个参数指定了需要保留的文件数目。默认是保留3个。
 
 推荐使用第一种方法
 
@@ -524,7 +520,7 @@ zk集群一般只有一个leader，多个follower，主一般是相应客户端�
 20348
  Jps
 
-4233 QuorumPeerMain 
+4233 QuorumPeerMain
 ```
 
 
