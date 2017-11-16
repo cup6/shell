@@ -20,3 +20,11 @@ OS：CentOS 7
 
 `vim /etc/squid/squid.conf`
 
+http\_access allow all
+
+\#修改deny为allow
+
+http\_port 192.168.1.8:3128
+
+cache\_dir ufs /var/spool/squid 100 16 256     \#打开这个注释，保证/var/spool/squid这个缓存目录存在
+
