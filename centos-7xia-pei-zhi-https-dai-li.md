@@ -40,5 +40,7 @@
 
 1. ## 客户端配置
 
-安装openssl
+安装openssl：
+
+`yum install -y gcc openssl openssl-devel`
 
