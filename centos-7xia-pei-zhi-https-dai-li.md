@@ -1,5 +1,7 @@
 # CentOS 7下配置https代理
 
+一、服务器配置
+
 ## 安装openssl
 
 * 使用yum安装openssl：
@@ -30,15 +32,11 @@
 
 * 重新启动squid服务
 
-`service squid stop`
-
-`service squid status`
-
-`service squid start`
+`service squid stop`
 
 `service squid status`
 
+`service squid start`
 
-
-
+`service squid status`
 
