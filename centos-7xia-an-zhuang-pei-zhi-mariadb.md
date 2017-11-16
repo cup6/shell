@@ -120,7 +120,7 @@ collation-server=utf8_unicode_ci
 skip-character-set-client-handshake
 ```
 
-2、修改文件/etc/my.cnf.d/client.cnf
+2、修改/etc/my.cnf.d/client.cnf文件：
 
 ```
 vim /etc/my.cnf.d/client.cnf
