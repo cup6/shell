@@ -6,7 +6,7 @@
 
 `rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch`
 
-小注：确保服务器能访问https网站，如果是内网服务器，可以使用squid配置https的方式实现代理https，请参考《CentOS 7下配置代理服务器squid》。
+小注：确保服务器能访问https网站，如果是内网服务器，可以使用squid配置https的方式实现代理https，请参考[《CentOS 7下配置代理服务器squid》](/centos7xia-pei-zhi-dai-li-fu-wu-qi-squid.md)。
 
 * 配置ES的yum源：
 
