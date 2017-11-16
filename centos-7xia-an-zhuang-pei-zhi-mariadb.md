@@ -48,5 +48,7 @@ _小注：这里加\*主要是安装mariadb其他相关的包，例如客户端�
 
 `Hint: Some lines were ellipsized, use -l to show in full.`
 
-如果在验证过程中出现错误，请查看/var/log/mariadb/mariadb.log文件（默认日志文件），查看启动失败的原因。
+当出现类似如上提示，表示mysql已经启动成功。如果在验证过程中出现错误，请查看/var/log/mariadb/mariadb.log文件（默认日志文件），查看启动失败的原因。
+
+
 
