@@ -74,11 +74,15 @@
 
 `vim /etc/profile`
 
-`https_proxy=http://127.0.0.1:4443`
+`https_proxy=http://127.0.0.1:4443`
 
-`export https_proxy`
+`export https_proxy`
 
 `source /etc/profile`
 
+测试：
 
+`wget https://www.baidu.com`
+
+如果访问失败，请根据错误提示修改。
 
