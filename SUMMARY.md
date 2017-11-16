@@ -10,4 +10,5 @@
 * [CentOS 7下配置代理服务器squid](centos7xia-pei-zhi-dai-li-fu-wu-qi-squid.md)
 * [CentOS 7下安装配置Mariadb](centos-7xia-an-zhuang-pei-zhi-mariadb.md)
 * [CentOS 7下安装ElasticSearch](centos-7xia-an-zhuang-elasticsearch.md)
+* [CentOS 7下配置https代理](centos-7xia-pei-zhi-https-dai-li.md)
 
