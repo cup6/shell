@@ -151,7 +151,7 @@ default-character-set=utf8
 systemctl restart mariadb
 ```
 
-5、之后进入MariaDB查看字符集
+5、进入MariaDB查看字符集
 
 ```
 mysql
@@ -163,5 +163,5 @@ mysql
 
 小坑1：执行命令提示：Ignoring query to other database
 
-原因：连接时，没有使用-u参数。
+原因：连接时，没有使用-u参数
 
