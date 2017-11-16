@@ -145,7 +145,7 @@ vim
 default-character-set=utf8
 ```
 
-全部配置完成，重启mariadb
+4、全部配置完成，重启mariadb：
 
 ```
 systemctl restart mariadb
