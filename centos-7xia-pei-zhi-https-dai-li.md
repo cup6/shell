@@ -82,7 +82,7 @@
 
 测试：
 
-`wget https://www.baidu.com`
+curl` https://www.baidu.com`
 
 如果访问失败，请根据错误提示修改。
 
