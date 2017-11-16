@@ -155,20 +155,8 @@ systemctl restart mariadb
 
 ```
 mysql
->
- show variables 
-like
- "
-%
-character
-%
-";show variables 
-like
- "
-%
-collation
-%
-";
+> show variables like "%character%";
+> show variables like "%collation%";
 ```
 
 显示为
