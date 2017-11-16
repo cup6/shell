@@ -56,7 +56,7 @@ _小注：这里加\*主要是安装mariadb其他相关的包，例如客户端�
 
 `Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service to usr/lib/systemd/system/mariadb.service.`
 
-5、配置MariaDB
+5、初始化MariaDB
 
 ```[root@izm5e4ame76454x0an58p4z conf]# mysql_secure_installation``
 
@@ -70,19 +70,31 @@ _小注：这里加\*主要是安装mariadb其他相关的包，例如客户端�
 
 `you haven't set the root password yet, the password will be blank,`
 
-```so you should just press enter here.```
+`so you should just press enter here.`
 
 `Enter current password for root (enter for none):初次运行直接回车`
 
-`Setting the root password ensures that nobody can log into the MariaDB`
+`Setting the root password ensures that nobody can log into the MariaDB`
 
-`root user without the proper authorisation.`
+\`root user without the proper authorisation.
 
-`Set root password? [Y/n] `**`在这里输入Y`**
+\`
 
-`New password: `**`请在此输入需要设置的root的密码`**
+`Set root password? [Y/n]在这里输入Y`
 
-`Re-enter new password: `**`请在此再次输入需要设置的root的密码`**
+`New password:请在此输入需要设置的root的密码`
+
+`Re-enter new password:请在此再次输入需要设置的root的密码`
+
+`Remove anonymous users? [Y/n]<– 是否删除匿名用户，回车`
+
+`Disallow root login remotely? [Y/n]<–是否禁止root远程登录,回车,`
+
+`Remove test database and access to it? [Y/n]<– 是否删除test数据库，回车`
+
+`Reload privilege tables now? [Y/n]<– 是否重新加载权限表，回车`
+
+6、登录验证
 
 
 
