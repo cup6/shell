@@ -145,13 +145,13 @@ vim
 default-character-set=utf8
 ```
 
-4、全部配置完成，重启mariadb：
+4、配置完后，重启mariadb：
 
 ```
 systemctl restart mariadb
 ```
 
-之后进入MariaDB查看字符集
+5、之后进入MariaDB查看字符集
 
 ```
 mysql
