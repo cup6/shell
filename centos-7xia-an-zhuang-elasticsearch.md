@@ -6,7 +6,7 @@
 
 `rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch`
 
-小注：确保服务器能访问https网站，如果是内网服务器，可以使用squid配置https的方式实现代理https，请参考[《CentOS 7下配置代理服务器squid》](/centos7xia-pei-zhi-dai-li-fu-wu-qi-squid.md)。
+小注：确保服务器能访问https网站，如果是内网服务器，可以使用squid配置https的方式实现代理https，请参考[《CentOS 7下配置https代理》](/centos-7xia-pei-zhi-https-dai-li.md)。
 
 * 配置ES的yum源：
 
@@ -63,7 +63,9 @@ type=rpm-md
 
 `CGroup: /system.slice/elasticsearch.service`
 
-          └─17340 /bin/java -Xms1g -Xmx1g -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+Always...
+```
+      └─17340 /bin/java -Xms1g -Xmx1g -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+Always...
+```
 
 `Nov 16 16:44:28 izm5eg85iprsk2ujegc29gz systemd[1]: Started Elasticsearch.`
 
