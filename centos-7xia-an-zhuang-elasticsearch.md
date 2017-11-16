@@ -37,3 +37,5 @@ type=rpm-md
 
 `vim /etc/elasticsearch/elasticsearch.yml`
 
+
+
