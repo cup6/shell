@@ -44,5 +44,11 @@
 
 `yum install -y gcc openssl openssl-devel`
 
+安装stunnel，实现客户端代理：
+
+`yum install stunnel`
+
+`cd /etc/stunnel/`
+
 
 
