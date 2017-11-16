@@ -2,7 +2,8 @@
 
 1. ## 服务器配置
 2. ### 安装openssl
-3. 使用yum安装openssl：
+
+* 使用yum安装openssl：
 
 `yum install -y gcc openssl openssl-devel`
 
@@ -39,8 +40,6 @@
 `service squid status`
 
 1. ## 客户端配置
-
-
 
 
 
