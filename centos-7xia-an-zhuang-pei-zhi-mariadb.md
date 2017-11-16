@@ -173,5 +173,7 @@ mysql
 
 重新加载配置：
 
-flush privileges;
+`flush privileges;`
+
+
 
