@@ -39,15 +39,11 @@ type=rpm-md
 
 最小的es配置如下：
 
-` 13 # ---------------------------------- Cluster -----------------------------------`
+`cluster.name: snoar-es`
 
-` 14 #`
+此处指定集群的名称，同一集群的各个结点的集群名称必须相同。
 
-` 15 # Use a descriptive name for your cluster:`
 
-` 16 #`
-
-` 17 cluster.name: snoar-es`
 
 
 
