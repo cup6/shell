@@ -9,4 +9,5 @@
 * [CentOS下安装Kafka](centosxia-an-zhuang-kafka.md)
 * [CentOS7下配置代理服务器squid](centos7xia-pei-zhi-dai-li-fu-wu-qi-squid.md)
 * [CentOS 7下安装配置Mariadb](centos-7xia-an-zhuang-pei-zhi-mariadb.md)
+* [CentOS 7下安装ElasticSearch](centos-7xia-an-zhuang-elasticsearch.md)
 
