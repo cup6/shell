@@ -38,15 +38,15 @@ OS：CentOS 7
 
 修改profile配置：
 
-vim /etc/profile
+`vim /etc/profile`
 
-` http_proxy=172.31.144.101:3128`
+`http_proxy=172.31.144.101:3128`
 
-` export http_proxy`
+`export http_proxy`
 
+重新加载profile配置
 
-
-
+source /etc/profile
 
 
 
