@@ -6,7 +6,7 @@
 
 yum install -y gcc openssl openssl-devel
 
-cd 
+cd cd /etc/squid/
 
 1. ## 
 
