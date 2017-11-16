@@ -2,9 +2,7 @@
 
 一、配置yum
 
-1 下载安装ES的yum公钥
-
-
+1. 下载安装ES的yum公钥
 
 `rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch`
 
