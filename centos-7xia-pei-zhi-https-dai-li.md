@@ -54,15 +54,23 @@
 
 `vim stunnel.conf`
 
-` client = yes `
+`client = yes`
 
-` [https]`
+`[https]`
 
-`accept = 127.0.0.1:4443`
+`accept = 127.0.0.1:4443`
 
-`connect = 172.31.144.101:443`
+`connect = 172.31.144.101:443`
 
+启动stunnel：
 
+`/usr/bin/stunnel /etc/stunnel/stunnel.conf`
+
+验证查看stunnel启动状态：
+
+`ps -ef|grep stunnel`
+
+配置环境变量：
 
 
 
