@@ -1,8 +1,8 @@
 # CentOS 7下配置https代理
 
-一、服务器配置
+1. ## 服务器配置
 
-## 安装openssl
+1. ### 安装openssl
 
 * 使用yum安装openssl：
 
@@ -18,7 +18,7 @@
 
 `openssl x509 -in testagentserver.csr -out testagentserver.crt -req -signkey testagentserver.key -days 3650`
 
-## 配置squid
+1. ### 配置squid
 
 * 修改squid.conf配置文件
 
@@ -39,4 +39,10 @@
 `service squid start`
 
 `service squid status`
+
+1. ## 客户端配置
+
+
+
+
 
