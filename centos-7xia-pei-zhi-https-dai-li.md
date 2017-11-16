@@ -18,5 +18,7 @@
 
 ## 配置squid
 
+修改squid.conf配置文件
+
 
 
