@@ -58,19 +58,25 @@ _小注：这里加\*主要是安装mariadb其他相关的包，例如客户端�
 
 5、配置MariaDB
 
-`[root@izm5e4ame76454x0an58p4z conf]# mysql_secure_installation`
+\`\[root@izm5e4ame76454x0an58p4z conf\]\# mysql\_secure\_installation
 
-`NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB`
+\`
 
-`      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!`
+`NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB`
 
-`In order to log into MariaDB to secure it, we'll need the current`
+\`      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
 
-`password for the root user.  If you've just installed MariaDB, and`
+\`
 
-`you haven't set the root password yet, the password will be blank,`
+`In order to log into MariaDB to secure it, we'll need the current`
 
-`so you should just press enter here.`
+`password for the root user.  If you've just installed MariaDB, and`
 
-`Enter current password for root (enter for none):请在此输入需要设置的root的密码`
+`you haven't set the root password yet, the password will be blank,`
+
+\`so you should just press enter here.
+
+\`
+
+`Enter current password for root (enter for none):`**`请在此输入需要设置的root的密码`**
 
