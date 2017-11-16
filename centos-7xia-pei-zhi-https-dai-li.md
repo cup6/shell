@@ -17,7 +17,8 @@
 `openssl x509 -in testagentserver.csr -out testagentserver.crt -req -signkey testagentserver.key -days 3650`
 
 1. ### 配置squid
-2. 修改squid.conf配置文件
+
+修改squid.conf配置文件
 
 `vim squid.conf`
 
@@ -39,7 +40,7 @@
 
 1. ## 客户端配置
 
-## 
+
 
 
 
