@@ -30,6 +30,14 @@
 
 * 重新启动squid服务
 
+`service squid stop`
+
+`service squid status`
+
+`service squid start`
+
+`service squid status`
+
 
 
 
