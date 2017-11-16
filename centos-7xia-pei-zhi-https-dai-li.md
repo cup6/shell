@@ -46,9 +46,13 @@
 
 安装stunnel，实现客户端代理：
 
-`yum install stunnel`
+`yum install stunnel`
 
 `cd /etc/stunnel/`
+
+配置stunnel
+
+`vim stunnel.conf`
 
 
 
