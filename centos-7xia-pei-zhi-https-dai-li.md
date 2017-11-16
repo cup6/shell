@@ -72,5 +72,13 @@
 
 配置环境变量：
 
+`vim /etc/profile`
+
+`https_proxy=http://127.0.0.1:4443`
+
+`export https_proxy`
+
+`source /etc/profile`
+
 
 
