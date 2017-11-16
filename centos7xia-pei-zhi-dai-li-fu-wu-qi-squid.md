@@ -1,4 +1,4 @@
-# CentOS7下配置代理服务器squid
+# CentOS 7下配置代理服务器squid
 
 因公司测试环境，只有一台服务器可以访问外网，而局域网内其他服务器也需要访问外网，经过初步选型，决定使用squid代理服务软件做上网代理服务器。
 
@@ -19,6 +19,4 @@ OS：CentOS 7
 修改squid配置文件，命令如下：
 
 `vim /etc/squid/squid.conf`
-
-
 
