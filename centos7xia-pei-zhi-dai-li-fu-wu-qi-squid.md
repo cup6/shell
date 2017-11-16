@@ -28,5 +28,5 @@ OS：CentOS 7
 
 启动squid服务：
 
-
+service start squid
 
