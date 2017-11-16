@@ -26,9 +26,7 @@
 
 `https_port 443 cert=/etc/squid/testagentserver.crt key=/etc/squid/testagentserver.key`
 
-`cache_dir ufs /var/spool/squid 100 16 256     #打开这个注释，保证/var/spool/squid这个缓存目录存在`
+`cache_dir ufs /var/spool/squid 100 16 256     #打开这个注释，保证/var/spool/squid这个缓存目录存在`
 
-重新启动squid
-
-
+重新启动squid服务
 
