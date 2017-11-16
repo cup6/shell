@@ -18,7 +18,17 @@
 
 ## 配置squid
 
-修改squid.conf配置文件
+* 修改squid.conf配置文件
+
+`vim squid.conf`
+
+`http_access allow all #deny修改为allow`
+
+`https_port 443 cert=/etc/squid/testagentserver.crt key=/etc/squid/testagentserver.key`
+
+`cache_dir ufs /var/spool/squid 100 16 256     #打开这个注释，保证/var/spool/squid这个缓存目录存在`
+
+重新启动squid
 
 
 
