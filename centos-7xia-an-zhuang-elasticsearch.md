@@ -33,3 +33,7 @@ type=rpm-md
 
 三、配置ElasticSearch
 
+修改es配置文件：
+
+`vim /etc/elasticsearch/elasticsearch.yml`
+
