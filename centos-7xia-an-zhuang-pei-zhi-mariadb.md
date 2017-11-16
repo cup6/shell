@@ -2,6 +2,8 @@
 
 本节主要介绍在CentOS7下安装配置Mariadb数据库的步骤。
 
+## 一、MariaDB安装
+
 1、在CentOS 7下使用yum命令安装mariadb数据库及其依赖：
 
 `yum install mariadb*`
@@ -99,4 +101,14 @@ _小注：这里加\*主要是安装mariadb其他相关的包，例如客户端�
 `mysql -uroot -p`
 
 输入刚才设置的密码，登录，如果登录成功，表示初始化工作已经完成。
+
+## 二、MariaDB配置
+
+
+
+小坑1：执行命令提示：Ignoring query to other database
+
+原因：连接时，没有使用-u参数。
+
+
 
