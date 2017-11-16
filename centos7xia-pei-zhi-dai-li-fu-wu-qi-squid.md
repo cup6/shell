@@ -32,5 +32,7 @@ OS：CentOS 7
 
 验证squid服务状态：
 
-service status squid
+`service status squid`
+
+3、客户端配置
 
