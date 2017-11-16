@@ -34,9 +34,6 @@ _小注：这里加\*主要是安装mariadb其他相关的包，例如客户端�
 
 `└─21927 /usr/libexec/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib64/mysql/plugin --log-error=/var/log/mariadb/mariad...`
 
-`  
-`
-
 `Nov 16 10:43:27 izm5e4ame76454x0an58p4z systemd[1]: Starting MariaDB database server...`
 
 `Nov 16 10:43:27 izm5e4ame76454x0an58p4z mariadb-prepare-db-dir[21718]: Database MariaDB is probably initialized in /var/lib/mysql already, nothin... done.`
