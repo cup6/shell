@@ -6,5 +6,5 @@
 
 `yum install mariadb*`
 
-
+小注：这里加\*主要是安装mariadb其他相关的包，例如客户端连接包，按照后，可在本地直接连接server
 
