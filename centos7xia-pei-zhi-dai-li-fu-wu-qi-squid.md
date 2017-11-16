@@ -50,7 +50,7 @@ OS：CentOS 7
 
 访问站点验证配置：
 
-`curl `[`http://www.baidu.com`](http://www.baidu.com)
+`curl`[`http://www.baidu.com`](http://www.baidu.com)
 
-如果访问失败，请查看/var/log/squid/目录下的日志文件，查找错误
+如果访问失败，请查看/var/log/squid/目录下的日志文件，查找错误，修正。
 
