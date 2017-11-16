@@ -5,9 +5,7 @@
 * 安装mysql数据库
 * 安装elasticsearch数据库
 
-
-
-安装Sonarqube
+## 安装Sonarqube
 
 
 
