@@ -167,7 +167,11 @@ mysql
 
 ## 三、配置MariaDB权限
 
-grant all privileges on \*.\* to sonar@'%' identified by 'yocRLLCl';
+登录mysql后，创建用户并授权：
+
+`grant all privileges on *.* to sonar@'%' identified by 'yocRLLCl';`
+
+重新加载配置：
 
 flush privileges;
 
