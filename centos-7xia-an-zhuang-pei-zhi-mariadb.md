@@ -120,7 +120,7 @@ collation-server=utf8_unicode_ci
 skip-character-set-client-handshake
 ```
 
-修改文件/etc/my.cnf.d/client.cnf
+2、修改文件/etc/my.cnf.d/client.cnf
 
 ```
 vim /etc/my.cnf.d/client.cnf
@@ -158,8 +158,6 @@ mysql
 > show variables like "%character%";
 > show variables like "%collation%";
 ```
-
-
 
 字符集配置完成。
 
