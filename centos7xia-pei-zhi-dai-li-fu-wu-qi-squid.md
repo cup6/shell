@@ -46,7 +46,9 @@ OS：CentOS 7
 
 重新加载profile配置
 
-source /etc/profile
+`source /etc/profile`
 
+访问站点验证配置：
 
+curl http://www.baidu.com
 
