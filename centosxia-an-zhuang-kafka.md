@@ -2,11 +2,11 @@
 
 **1、软件环境**
 
-1、linux一台或多台，大于等于2
+（1）linux一台或多台，大于等于2
 
-2、已经搭建好的zookeeper集群（172.31.144.104~106）
+（2）已经搭建好的zookeeper集群（172.31.144.104~106）
 
-3、软件版本kafka\_2.12-0.11.0.1.tgz[ ](http://apache.opencas.org/kafka/0.9.0.1/kafka_2.11-0.9.0.1.tgz)
+（3）软件版本kafka\_2.12-0.11.0.1.tgz[ ](http://apache.opencas.org/kafka/0.9.0.1/kafka_2.11-0.9.0.1.tgz)
 
 **2、创建目录并下载安装软件**
 
