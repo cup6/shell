@@ -37,5 +37,17 @@ type=rpm-md
 
 `vim /etc/elasticsearch/elasticsearch.yml`
 
+最小的es配置如下：
+
+` 13 # ---------------------------------- Cluster -----------------------------------`
+
+` 14 #`
+
+` 15 # Use a descriptive name for your cluster:`
+
+` 16 #`
+
+` 17 cluster.name: snoar-es`
+
 
 
