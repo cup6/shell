@@ -4,5 +4,7 @@
 
 1、在CentOS 7下使用yum命令安装mariadb数据库及其依赖：
 
-yum install mariadb\*
+`yum install mariadb*`
+
+
 
