@@ -10,7 +10,11 @@
 
 * 生成加密代理证书：
 
+`openssl req -new > testagentserver.csr`
 
+`openssl rsa -in privkey.pem -out testagentserver.key`
+
+`openssl x509 -in testagentserver.csr -out testagentserver.crt -req -signkey testagentserver.key -days 3650`
 
 1. ## 
 
