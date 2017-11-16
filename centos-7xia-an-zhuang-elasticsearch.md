@@ -7,6 +7,6 @@
 `rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch`
 
 * 配置ES的yum源：
-
+* 
 
 
