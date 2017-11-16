@@ -1,6 +1,6 @@
 # CentOS 7下安装ElasticSearch
 
-一、配置yum
+## 一、配置yum
 
 * 下载安装ES的yum公钥：
 
@@ -23,7 +23,7 @@ autorefresh=1
 type=rpm-md
 ```
 
-二、安装ElasticSearch
+## 二、安装ElasticSearch
 
 使用yum命令安装：
 
@@ -31,7 +31,7 @@ type=rpm-md
 
 按照提示完成安装。
 
-三、配置ElasticSearch
+## 三、配置ElasticSearch
 
 修改es配置文件：
 
