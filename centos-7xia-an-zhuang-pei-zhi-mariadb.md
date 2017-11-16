@@ -165,11 +165,7 @@ mysql
 
 原因：连接时，没有使用-u参数
 
-三、
-
-
-
-
+三、配置MariaDB权限
 
 grant all privileges on \*.\* to sonar@'%' identified by 'yocRLLCl';
 
