@@ -8,6 +8,8 @@
 
 * 配置ES的yum源：
 
+`vim /etc/yum.repos.d/elasticsearch.repo`
+
 
 
 
