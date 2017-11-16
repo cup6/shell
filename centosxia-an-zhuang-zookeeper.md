@@ -1,4 +1,4 @@
-# CentOS下安装zookeeper
+# CentOS 7下安装zookeeper
 
 **1、软件环境**
 
