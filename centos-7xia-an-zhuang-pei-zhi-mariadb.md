@@ -104,6 +104,8 @@ _小注：这里加\*主要是安装mariadb其他相关的包，例如客户端�
 
 ## 二、MariaDB配置字符集
 
+1、修改my.cnf
+
 小坑1：执行命令提示：Ignoring query to other database
 
 原因：连接时，没有使用-u参数。
