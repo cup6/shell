@@ -159,30 +159,7 @@ mysql
 > show variables like "%collation%";
 ```
 
-显示为
 
-+--------------------------+----------------------------+  
-\| Variable\_name            \| Value                      \|  
-+--------------------------+----------------------------+  
-\| character\_set\_client    \| utf8                      \|  
-\| character\_set\_connection \| utf8                      \|  
-\| character\_set\_database  \| utf8                      \|  
-\| character\_set\_filesystem \| binary                    \|  
-\| character\_set\_results    \| utf8                      \|  
-\| character\_set\_server    \| utf8                      \|  
-\| character\_set\_system    \| utf8                      \|  
-\| character\_sets\_dir      \| /usr/share/mysql/charsets/ \|  
-+--------------------------+----------------------------+  
-8 rows in set \(0.00 sec\)
-
-+----------------------+-----------------+  
-\| Variable\_name        \| Value          \|  
-+----------------------+-----------------+  
-\| collation\_connection \| utf8\_unicode\_ci \|  
-\| collation\_database  \| utf8\_unicode\_ci \|  
-\| collation\_server    \| utf8\_unicode\_ci \|  
-+----------------------+-----------------+  
-3 rows in set \(0.00 sec\)
 
 字符集配置完成。
 
