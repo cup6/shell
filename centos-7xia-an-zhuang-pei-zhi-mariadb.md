@@ -132,7 +132,7 @@ vim /etc/my.cnf.d/client.cnf
 default-character-set=utf8
 ```
 
-修改文件/etc/my.cnf.d/mysql-clients.cnf
+3、修改/etc/my.cnf.d/mysql-clients.cnf文件：
 
 ```
 vim
