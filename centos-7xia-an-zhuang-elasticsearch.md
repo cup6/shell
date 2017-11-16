@@ -51,27 +51,23 @@ type=rpm-md
 
 `systemctl status elasticsearch`
 
-`● elasticsearch.service - Elasticsearch`
+`● elasticsearch.service - Elasticsearch`
 
-`Loaded: loaded (/usr/lib/systemd/system/elasticsearch.service; disabled; vendor preset: disabled)`
+`Loaded: loaded (/usr/lib/systemd/system/elasticsearch.service; disabled; vendor preset: disabled)`
 
-`   Active: active (running) since Thu 2017-11-16 16:44:28 CST; 1s ago`
+`Active: active (running) since Thu 2017-11-16 16:44:28 CST; 1s ago`
 
-`     Docs: http://www.elastic.co`
+`Docs: http://www.elastic.co`
 
-` Main PID: 17340 (java)`
+`Main PID: 17340 (java)`
 
-`   CGroup: /system.slice/elasticsearch.service`
+`CGroup: /system.slice/elasticsearch.service`
 
-`           └─17340 /bin/java -Xms1g -Xmx1g -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+Always...`
+          └─17340 /bin/java -Xms1g -Xmx1g -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+Always...
 
-`Nov 16 16:44:28 izm5eg85iprsk2ujegc29gz systemd[1]: Started Elasticsearch.`
+`Nov 16 16:44:28 izm5eg85iprsk2ujegc29gz systemd[1]: Started Elasticsearch.`
 
-`Nov 16 16:44:28 izm5eg85iprsk2ujegc29gz systemd[1]: Starting Elasticsearch...`
+`Nov 16 16:44:28 izm5eg85iprsk2ujegc29gz systemd[1]: Starting Elasticsearch...`
 
 出现类似如上提示，表示ElasticSearch已经正确安装。
-
-
-
-
 
