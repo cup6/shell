@@ -52,9 +52,9 @@ _小注：这里加\*主要是安装mariadb其他相关的包，例如客户端�
 
 4、设置服务开机自动启动
 
-`systemctl enable mariadb`
+`systemctl enable mariadb`
 
-`Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service to usr/lib/systemd/system/mariadb.service.`
+`Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service to usr/lib/systemd/system/mariadb.service.`
 
-
+5、配置MariaDB
 
