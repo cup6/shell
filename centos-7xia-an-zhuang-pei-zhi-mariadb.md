@@ -175,5 +175,7 @@ mysql
 
 `flush privileges;`
 
+用新账号重新登录，验证结果：
 
+`mysql -usonar -p`
 
