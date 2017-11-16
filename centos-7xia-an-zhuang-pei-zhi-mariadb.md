@@ -104,9 +104,115 @@ _小注：这里加\*主要是安装mariadb其他相关的包，例如客户端�
 
 ## 二、MariaDB配置字符集
 
-1、修改my.cnf文件
+1、修改my.cnf文件：
 
+```bash
+vim /etc/my.cnf
+```
 
+在\[mysqld\]标签下添加
+
+```
+init_connect=
+'
+SET collation_connection = utf8_unicode_ci
+'
+ 
+init_connect
+=
+'
+SET NAMES utf8
+'
+ 
+character
+-set-server=
+utf8 
+collation
+-server=
+utf8_unicode_ci 
+skip
+-character-set-client-handshake
+```
+
+文件/etc/my.cnf.d/client.cnf
+
+```
+vi
+ /etc/my.cnf.d/client.cnf
+```
+
+在\[client\]中添加
+
+```
+default-character-set=utf8
+```
+
+文件/etc/my.cnf.d/mysql-clients.cnf
+
+```
+vi
+ /etc/my.cnf.d/mysql-clients.cnf
+```
+
+在\[mysql\]中添加
+
+```
+default-character-set=utf8
+```
+
+ 全部配置完成，重启mariadb
+
+```
+systemctl restart mariadb
+```
+
+之后进入MariaDB查看字符集
+
+```
+mysql
+>
+ show variables 
+like
+ "
+%
+character
+%
+";show variables 
+like
+ "
+%
+collation
+%
+";
+```
+
+显示为
+
+  
++--------------------------+----------------------------+  
+\| Variable\_name            \| Value                      \|  
++--------------------------+----------------------------+  
+\| character\_set\_client    \| utf8                      \|  
+\| character\_set\_connection \| utf8                      \|  
+\| character\_set\_database  \| utf8                      \|  
+\| character\_set\_filesystem \| binary                    \|  
+\| character\_set\_results    \| utf8                      \|  
+\| character\_set\_server    \| utf8                      \|  
+\| character\_set\_system    \| utf8                      \|  
+\| character\_sets\_dir      \| /usr/share/mysql/charsets/ \|  
++--------------------------+----------------------------+  
+8 rows in set \(0.00 sec\)
+
++----------------------+-----------------+  
+\| Variable\_name        \| Value          \|  
++----------------------+-----------------+  
+\| collation\_connection \| utf8\_unicode\_ci \|  
+\| collation\_database  \| utf8\_unicode\_ci \|  
+\| collation\_server    \| utf8\_unicode\_ci \|  
++----------------------+-----------------+  
+3 rows in set \(0.00 sec\)
+
+字符集配置完成。
 
 小坑1：执行命令提示：Ignoring query to other database
 
