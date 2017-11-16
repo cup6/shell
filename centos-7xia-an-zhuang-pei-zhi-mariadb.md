@@ -167,3 +167,11 @@ mysql
 
 三、
 
+
+
+
+
+grant all privileges on \*.\* to sonar@'%' identified by 'yocRLLCl';
+
+flush privileges;
+
