@@ -27,5 +27,7 @@ type=rpm-md
 
 `sudo yum install elasticsearch`
 
-按照提示完成安装
+按照提示完成安装。
+
+三、配置ElasticSearch
 
