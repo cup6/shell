@@ -1,4 +1,4 @@
-## CentOS7下Kafka集群搭建 {#autoid-0-3-0}
+## CentOS 7下Kafka集群搭建 {#autoid-0-3-0}
 
 **1、软件环境**
 
