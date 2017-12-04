@@ -1,1 +1,6 @@
-This file serves as an introduction to your Knowledge Base, it is displayed on the homepage of your website. Use it to provide more context to your visitors.
+工作中的零散知识积累，目前主要包括：
+
+* 安装手册.
+
+
+
