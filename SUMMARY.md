@@ -13,4 +13,5 @@
 * [CentOS 7下配置https代理](centos-7xia-pei-zhi-https-dai-li.md)
 * [CentOS 7下安装配置Sonarqube](centos-7xia-an-zhuang-pei-zhi-sonarqube.md)
 * [配置内网访问代理](pei-zhi-nei-wang-fang-wen-dai-li.md)
+* [Amazon下安装MongoDB](amazonxia-anzhuang-mongodb.md)
 
