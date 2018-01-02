@@ -32,9 +32,7 @@ To install a different version of MongoDB, please refer to that version’s docu
 
 This installation guide only supports 64-bit systems. See[Platform Support](https://docs.mongodb.com/manual/release-notes/3.0-compatibility/#compatibility-platform-support)for details.
 
-1
-
-### Configure the package management system \(`yum`\).
+### 1Configure the package management system \(`yum`\).
 
 Create a`/etc/yum.repos.d/mongodb-org-3.4.repo`file so that you can install MongoDB directly, using`yum`.
 
@@ -71,9 +69,7 @@ enabled=1
 
 You can find`.repo`files for each release[in the repository itself](https://repo.mongodb.org/yum/amazon/). Remember that odd-numbered minor release versions \(e.g. 2.5\) are development versions and are unsuitable for production use.
 
-2
-
-### Install the MongoDB packages and associated tools.
+### 2Install the MongoDB packages and associated tools.
 
 To install the latest stable version of MongoDB, issue the following command:
 
@@ -103,9 +99,7 @@ You can verify that the[`mongod`](https://docs.mongodb.com/manual/reference/prog
 
 ```
 [initandlisten] waiting for connections on port 
-<
-port
->
+<port>
 ```
 
 where`<port>`is the port configured in`/etc/mongod.conf`,`27017`by default.
@@ -150,9 +144,7 @@ WARNING
 
 This process will\_completely\_remove MongoDB, its configuration, and\_all\_databases. This process is not reversible, so ensure that all of your configuration and data is backed up before proceeding.
 
-1
-
-### Stop MongoDB.
+### 1Stop MongoDB.
 
 Stop the[`mongod`](https://docs.mongodb.com/manual/reference/program/mongod/#bin.mongod)process by issuing the following command:
 
@@ -160,24 +152,16 @@ Stop the[`mongod`](https://docs.mongodb.com/manual/reference/program/mongod/#bin
 sudo service mongod stop
 ```
 
-2
-
-### Remove Packages.
+### 2Remove Packages.
 
 Remove any MongoDB packages that you had previously installed.
 
 ```
 sudo yum erase 
-$(
-rpm -qa 
-|
- grep mongodb-org
-)
+$(rpm -qa | grep mongodb-org)
 ```
 
-3
-
-### Remove Data Directories.
+### 3Remove Data Directories.
 
 Remove MongoDB databases and log files.
 
