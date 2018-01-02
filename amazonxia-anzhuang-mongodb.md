@@ -1,12 +1,10 @@
 # Amazon下安装MongoDB社区版
 
-[MongoDB Atlas](https://www.mongodb.com/cloud/atlas?jmp=docs)是一个MongoDB服务，可以管理、运行MongoDB集群。or launching, running, and maintaining MongoDB clusters.
+[MongoDB Atlas](https://www.mongodb.com/cloud/atlas?jmp=docs)是一个MongoDB服务，可以管理、运行MongoDB集群。
 
 ## Overview
 
 Use this tutorial to install MongoDB Community Edition on Amazon Linux from`.rpm`packages.
-
-此
 
 ## Packages
 
@@ -48,23 +46,13 @@ Use the following repository file:
 
 Copy
 
-```
+```bash
 [mongodb-org-3.4]
-name
-=
-MongoDB Repository
-baseurl
-=
-https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/3.4/x86_64/
-gpgcheck
-=
-1
-enabled
-=
-1
-gpgkey
-=
-https://www.mongodb.org/static/pgp/server-3.4.asc
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/3.4/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
 ```
 
 #### For versions of MongoDB\_earlier\_than 3.0
@@ -75,18 +63,10 @@ Copy
 
 ```
 [mongodb-org-2.6]
-name
-=
-MongoDB 2.6 Repository
-baseurl
-=
-http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
-gpgcheck
-=
-0
-enabled
-=
-1
+name=MongoDB 2.6 Repository
+baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
+gpgcheck=0
+enabled=1
 ```
 
 You can find`.repo`files for each release[in the repository itself](https://repo.mongodb.org/yum/amazon/). Remember that odd-numbered minor release versions \(e.g. 2.5\) are development versions and are unsuitable for production use.
@@ -109,9 +89,7 @@ The MongoDB instance stores its data files in`/var/lib/mongo`and its log files i
 
 If you change the user that runs the MongoDB process, you**must**modify the access control rights to the`/var/lib/mongo`and`/var/log/mongodb`directories to give this user access to these directories.
 
-1
-
-### Start MongoDB.
+### 1Start MongoDB.
 
 You can start the[`mongod`](https://docs.mongodb.com/manual/reference/program/mongod/#bin.mongod)process by issuing the following command:
 
@@ -119,9 +97,7 @@ You can start the[`mongod`](https://docs.mongodb.com/manual/reference/program/mo
 sudo service mongod start
 ```
 
-2
-
-### Verify that MongoDB has started successfully
+### 2Verify that MongoDB has started successfully
 
 You can verify that the[`mongod`](https://docs.mongodb.com/manual/reference/program/mongod/#bin.mongod)process has started successfully by checking the contents of the log file at`/var/log/mongodb/mongod.log`for a line reading
 
@@ -140,9 +116,7 @@ You can optionally ensure that MongoDB will start following a system reboot by i
 sudo chkconfig mongod on
 ```
 
-3
-
-### Stop MongoDB.
+### 3Stop MongoDB.
 
 As needed, you can stop the[`mongod`](https://docs.mongodb.com/manual/reference/program/mongod/#bin.mongod)process by issuing the following command:
 
@@ -150,9 +124,7 @@ As needed, you can stop the[`mongod`](https://docs.mongodb.com/manual/reference/
 sudo service mongod stop
 ```
 
-4
-
-### Restart MongoDB.
+### 4Restart MongoDB.
 
 You can restart the[`mongod`](https://docs.mongodb.com/manual/reference/program/mongod/#bin.mongod)process by issuing the following command:
 
@@ -162,9 +134,7 @@ sudo service mongod restart
 
 You can follow the state of the process for errors or important messages by watching the output in the`/var/log/mongodb/mongod.log`file.
 
-5
-
-### Begin using MongoDB.
+### 5Begin using MongoDB.
 
 To help you start using MongoDB, MongoDB provides[Getting Started Guides](https://docs.mongodb.com/manual/tutorial/getting-started/#getting-started)in various driver editions. See[Getting Started](https://docs.mongodb.com/manual/tutorial/getting-started/#getting-started)for the available editions.
 
