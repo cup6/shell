@@ -1,18 +1,6 @@
-# Amazon下安装MongoDB社区
+# Amazon下安装MongoDB社区版
 
-# Install MongoDB Community Edition on Amazon Linux
-
-On this page
-
-* [Overview](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/#overview)
-* [Packages](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/#packages)
-* [Install MongoDB Community Edition](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/#install-mongodb-community-edition)
-* [Run MongoDB Community Edition](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/#run-mongodb-community-edition)
-* [Uninstall MongoDB Community Edition](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/#uninstall-mongodb-community-edition)
-
-MONGODB ATLAS AND AWS
-
-[MongoDB Atlas](https://www.mongodb.com/cloud/atlas?jmp=docs)is a hosted MongoDB service on AWS, for launching, running, and maintaining MongoDB clusters.
+[MongoDB Atlas](https://www.mongodb.com/cloud/atlas?jmp=docs)是一个MongoDB服务，可以管理、运行MongoDB集群。or launching, running, and maintaining MongoDB clusters.
 
 ## Overview
 
@@ -54,7 +42,7 @@ Create a`/etc/yum.repos.d/mongodb-org-3.4.repo`file so that you can install Mong
 
 Changed in version 3.0:MongoDB Linux packages are in a new repository beginning with 3.0.
 
-#### For the_latest_stable release of MongoDB
+#### For the\_latest\_stable release of MongoDB
 
 Use the following repository file:
 
@@ -79,7 +67,7 @@ gpgkey
 https://www.mongodb.org/static/pgp/server-3.4.asc
 ```
 
-#### For versions of MongoDB_earlier_than 3.0
+#### For versions of MongoDB\_earlier\_than 3.0
 
 To install the packages from an earlier[release series](https://docs.mongodb.com/manual/release-notes/#release-version-numbers), such as 2.4 or 2.6, you can specify the release series in the repository configuration. For example, to restrict your system to the 2.6 release series, create a`/etc/yum.repos.d/mongodb-org-2.6.repo`file to hold the following configuration information for the MongoDB 2.6 repository:
 
@@ -111,7 +99,6 @@ To install the latest stable version of MongoDB, issue the following command:
 
 ```
 sudo yum install -y mongodb-org
-
 ```
 
 ## Run MongoDB Community Edition
@@ -130,7 +117,6 @@ You can start the[`mongod`](https://docs.mongodb.com/manual/reference/program/mo
 
 ```
 sudo service mongod start
-
 ```
 
 2
@@ -152,7 +138,6 @@ You can optionally ensure that MongoDB will start following a system reboot by i
 
 ```
 sudo chkconfig mongod on
-
 ```
 
 3
@@ -163,7 +148,6 @@ As needed, you can stop the[`mongod`](https://docs.mongodb.com/manual/reference/
 
 ```
 sudo service mongod stop
-
 ```
 
 4
@@ -174,7 +158,6 @@ You can restart the[`mongod`](https://docs.mongodb.com/manual/reference/program/
 
 ```
 sudo service mongod restart
-
 ```
 
 You can follow the state of the process for errors or important messages by watching the output in the`/var/log/mongodb/mongod.log`file.
@@ -195,7 +178,7 @@ To completely remove MongoDB from a system, you must remove the MongoDB applicat
 
 WARNING
 
-This process will_completely_remove MongoDB, its configuration, and_all_databases. This process is not reversible, so ensure that all of your configuration and data is backed up before proceeding.
+This process will\_completely\_remove MongoDB, its configuration, and\_all\_databases. This process is not reversible, so ensure that all of your configuration and data is backed up before proceeding.
 
 1
 
@@ -205,7 +188,6 @@ Stop the[`mongod`](https://docs.mongodb.com/manual/reference/program/mongod/#bin
 
 ```
 sudo service mongod stop
-
 ```
 
 2
